@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: hsl(216, 12%, 8%);
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  background-image: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  width: 20.5em;
+  margin: 2em;
+  padding: 1.5em;
+  border-radius: 1em;
+  overflow: hidden;
+}
+.card img {
+  border-radius: 50%;
+  padding: 0.7em;
+  background: hsl(213, 19%, 18%);
+}
+.card .title {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  margin: 0.8em 0 0.5em 0;
+}
+.card .text {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.main ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5em 0 2em 0;
+}
+.main ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(217, 12%, 63%);
+  background: hsl(213, 19%, 18%);
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.main ul li:hover {
+  background: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+.main ul li.checked {
+  background: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+.main .button {
+  display: block;
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+  background: hsl(25, 97%, 53%);
+  padding: 1em;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 1.5rem;
+  margin-bottom: 0.7em;
+}
+.main .button:hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.thank-you img {
+  display: block;
+  margin: 0 auto;
+}
+.thank-you .result {
+  color: hsl(25, 97%, 53%);
+  text-align: center;
+  padding: 0.5em 1.3em 0.2em 1.3em;
+  margin: 1em auto 2em auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: hsl(213, 19%, 18%);
+  border-radius: 1.5rem;
+}
+.thank-you .title, .thank-you .text {
+  text-align: center;
+}
+
+@media only screen and (min-width: 1440px) {
+  .card {
+    width: 25.75em;
+  }
+  .card .title {
+    font-size: 1.75rem;
+  }
+  .card .text {
+    font-size: 0.937rem;
+    line-height: 1.5rem;
+  }
+  .main ul li {
+    width: 3.18rem;
+    height: 3.18rem;
+    font-size: 1rem;
+  }
+  .main .button {
+    font-size: 0.937rem;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,158 @@
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$lightgrey: hsl(217, 12%, 63%);
+$mediumgrey: hsl(216, 12%, 54%);
+$darkblue: hsl(213, 19%, 18%);
+$verydarkblue: hsl(216, 12%, 8%);
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $verydarkblue;
+    font-family: "Overpass", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.card {
+    background-image: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+    width:20.5em;
+    margin: 2em;
+    padding: 1.5em;
+    border-radius: 1em;
+    overflow: hidden;
+
+    img {
+        border-radius: 50%;
+        padding: .7em;
+        background: $darkblue;
+    }
+
+    .title {
+        color: $white;
+        font-size: 1.5rem;
+        margin: 0.8em 0 0.5em 0;
+    }
+
+    .text {
+        color: $lightgrey;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+
+.main {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin: 1.5em 0 2em 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $lightgrey;
+            background: $darkblue;
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 50%;
+            font-size: 0.875rem;
+            cursor: pointer;
+
+            &:hover {
+                background: $mediumgrey;
+                color: $white;
+            }
+        }
+
+        li.checked {
+            background: $orange;
+            color: $white;
+        }
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        color: $white;
+        background: $orange;
+        padding: 1em;
+        font-size: 0.875rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 1.5rem;
+        margin-bottom: 0.7em;
+
+        &:hover {
+            background: $white;
+            color: $orange;
+        }
+    }
+}
+
+.thank-you {
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .result {
+        color: $orange;
+        text-align: center;
+        padding: 0.5em 1.3em 0.2em 1.3em;
+        margin: 1em auto 2em auto;
+        width: fit-content;
+        background: $darkblue;
+        border-radius: 1.5rem;
+    }
+
+    .title, .text {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .card {
+        width: 25.75em;
+
+        .title {
+            font-size: 1.75rem;
+        }
+
+        .text {
+            font-size: 0.937rem; 
+            line-height: 1.5rem;
+        }
+    }
+
+    .main {
+        ul {
+            li {
+                width: 3.18rem;
+                height: 3.18rem;
+                font-size: 1rem;
+            }
+        }
+
+        .button {
+            font-size: 0.937rem;
+        }
+    }
+}
